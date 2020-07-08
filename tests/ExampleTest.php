@@ -1,13 +1,12 @@
 <?php
 
-namespace PolymorphicEav\PolymorphicEav\Tests;
+namespace DavidWesdijk\LaravelPolymorphicEav\Tests;
 
+use DavidWesdijk\LaravelPolymorphicEav\Providers\PolymorphicEavServiceProvider;
 use Orchestra\Testbench\TestCase;
-use PolymorphicEav\PolymorphicEav\PolymorphicEavServiceProvider;
 
 class ExampleTest extends TestCase
 {
-
     protected function getPackageProviders($app)
     {
         return [PolymorphicEavServiceProvider::class];
