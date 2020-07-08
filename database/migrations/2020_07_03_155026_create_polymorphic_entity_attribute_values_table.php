@@ -27,6 +27,8 @@ class CreatePolymorphicEntityAttributeValuesTable extends Migration
             $table->unsignedInteger('entity_attribute_id');
             $table->string('value')->nullable();
             $table->timestamps();
+
+            $table->index(['attributable_id', 'attributable_type']);
         });
     }
 
