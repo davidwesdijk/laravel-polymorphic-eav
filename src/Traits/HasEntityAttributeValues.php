@@ -2,6 +2,9 @@
 
 namespace DavidWesdijk\LaravelPolymorphicEav\Traits;
 
+use DavidWesdijk\LaravelPolymorphicEav\EntityAttributeValue;
+use DavidWesdijk\LaravelPolymorphicEav\Resolvers\GroupResolver;
+
 trait HasEntityAttributeValues
 {
     /**
