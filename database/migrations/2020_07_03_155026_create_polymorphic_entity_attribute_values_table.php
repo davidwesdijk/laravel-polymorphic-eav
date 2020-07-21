@@ -20,7 +20,7 @@ class CreatePolymorphicEntityAttributeValuesTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create(config('laravel-polymorphic-eav.entity_attribute_values'), function (Blueprint $table) {
+        Schema::create(config('laravel-polymorphic-eav.value-table'), function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedInteger('attributable_id');
             $table->string('attributable_type');
@@ -40,6 +40,6 @@ class CreatePolymorphicEntityAttributeValuesTable extends Migration
     public function down()
     {
         Schema::dropIfExists(config('laravel-polymorphic-eav.attribute-table'));
-        Schema::dropIfExists(config('laravel-polymorphic-eav.entity_attribute_values'));
+        Schema::dropIfExists(config('laravel-polymorphic-eav.value-table'));
     }
 }
