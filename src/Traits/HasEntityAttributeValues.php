@@ -4,9 +4,16 @@ namespace DavidWesdijk\LaravelPolymorphicEav\Traits;
 
 use DavidWesdijk\LaravelPolymorphicEav\EntityAttributeValue;
 use DavidWesdijk\LaravelPolymorphicEav\Resolvers\GroupResolver;
+use DavidWesdijk\LaravelPolymorphicEav\Scopes\EntityAttributeValueScopes;
 
+/**
+ * Trait HasEntityAttributeValues
+ * @package DavidWesdijk\LaravelPolymorphicEav\Traits
+ */
 trait HasEntityAttributeValues
 {
+    use EntityAttributeValueScopes;
+
     /**
      * @var string
      */
