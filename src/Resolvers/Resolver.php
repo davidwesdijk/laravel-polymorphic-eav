@@ -157,7 +157,7 @@ class Resolver implements Arrayable, Jsonable
                 ]);
         }
 
-        $this->resolver->model->load(HasEntityAttributes::$relationName);
+        $this->resolver->model->load(HasEntityAttributeValues::$relationName);
 
         return $eav;
     }
