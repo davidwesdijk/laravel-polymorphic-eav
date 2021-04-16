@@ -49,11 +49,11 @@ class Resolver implements Arrayable, Jsonable
      * Set the value of the requested property by the called property name
      *
      * @param string $property
-     * @param string $value
+     * @param string|null $value
      *
      * @return string|null
      */
-    public function __set(string $property, string $value): ?string
+    public function __set(string $property, ?string $value): ?string
     {
         return $this->updateOrCreateValue($property, $value)->{HasEntityAttributeValues::$value};
     }
@@ -136,11 +136,11 @@ class Resolver implements Arrayable, Jsonable
 
     /**
      * @param string $property
-     * @param string $value
+     * @param string|null $value
      *
      * @return EntityAttributeValue
      */
-    private function updateOrCreateValue(string $property, string $value): EntityAttributeValue
+    private function updateOrCreateValue(string $property, ?string $value): EntityAttributeValue
     {
         if ($eav = $this->getEntityAttributeValue($property)) {
             $eav->{HasEntityAttributeValues::$value} = $value;
