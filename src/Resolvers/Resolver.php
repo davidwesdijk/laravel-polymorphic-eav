@@ -53,7 +53,7 @@ class Resolver implements Arrayable, Jsonable
      *
      * @return string|null
      */
-    public function __set(string $property, ?string $value): ?string
+    public function __set(string $property, ?string $value)
     {
         return $this->updateOrCreateValue($property, $value)->{HasEntityAttributeValues::$value};
     }
